@@ -19,6 +19,26 @@ const pessoa = {
     idade: 19 
 }
 
+console.log("-")
+
+
 for (let p in pessoa){
     console.log (p, pessoa [p])
+}
+
+const usuario = 'Valmir'
+for (let u = 0; u < usuario.length; u++){
+    console.log (usuario[u])
+}
+
+console.log("-")
+
+for ( let u in usuario){
+    console.log (usuario[u])
+}
+
+console.log("-")
+
+for ( let valor of usuario){
+    console.log (valor) 
 }
