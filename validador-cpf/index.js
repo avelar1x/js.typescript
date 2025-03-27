@@ -9,12 +9,14 @@ function ValidaCPF(cpfEnviado){
 ValidaCPF.prototype.valida = function(){
     if(typeof this.cpfLimpo === 'undefined') return false;
     if(this.cpfLimpo.length !== 11) return false;
+    if(this.isSequencia()) return false;
     
     const cpfParcial = this.cpfLimpo.slice(0, -2);
     const digito1 = this.criaDigito(cpfParcial)
     const digito2 = this.criaDigito(cpfParcial + digito1)
 
     const novoCpf = cpfParcial + digito1 + digito2; 
+    return novoCpf === this.cpfLimpo
 
   ; console.log(novoCpf)
     return true;
@@ -33,6 +35,15 @@ ValidaCPF.prototype.criaDigito = function(cpfParcial){
     return digito > 9 ? '0': String(digito)
 }   
 
-const cpf = new ValidaCPF('127.361.076-00')
+ValidaCPF.prototype.isSequencia = function(){
+    const sequencia =  this.cpfLimpo[0].repeat(this.cpfLimpo.length)
+    return sequencia === this.cpfLimpo
+}
 
-console.log(cpf.valida())
+const cpf = new ValidaCPF('128..-0')
+
+if(cpf.valida()) {
+    console.log("Cpf Válido")
+} else {
+    console.log("Cpf Invélido")
+}
