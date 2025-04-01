@@ -9,6 +9,7 @@ header {
     background-color: #6a0dad; 
     text-align: center;
     padding: 5px;
+    height: 100%;
     position: sticky;
     top: 0;
     width: 100%;
