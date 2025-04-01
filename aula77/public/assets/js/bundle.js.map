@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;AAAA,SAASA,UAAUA,CAACC,IAAI,EAAEC,SAAS,EAAC;EAChCD,IAAI,GAAGA,IAAI;EACXC,SAAS,GAAGA,SAAS;AACzB,C","sources":["webpack://aula77/./src/index.js"],"sourcesContent":["function criaPessoa(nome, sobrenome){\r\n    nome = nome\r\n    sobrenome = sobrenome\r\n}"],"names":["criaPessoa","nome","sobrenome"],"sourceRoot":""}
